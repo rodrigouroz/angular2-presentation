@@ -1,5 +1,7 @@
 # Angular 2 presentation
 
+https://docs.google.com/presentation/d/14xxsr0hMwgoPG5-iV1VdgcewN4FohVmV_ekjyjE86Zg/edit?usp=sharing
+
 # Install
 `npm install`
 
