@@ -1,0 +1,10 @@
+<table class="table table-striped">
+  <tr>
+    <th *ngFor="#col of columns">
+      <a (click)="sort(col.name)">{{col.descr}}</a>
+    </th>
+  </tr>
+  <tr *ngFor="#row of rows">
+    <td (click)="onClick(row)" *ngFor="#col of columns">{{row[col.name]}}</td>
+  </tr>
+</table>

@@ -1,0 +1,29 @@
+<html>
+
+  <head>
+    <!-- base url -->
+    <base href="{%= o.webpackConfig.metadata.baseUrl %}">
+    <title>{%= o.webpackConfig.metadata.title %}</title>
+    
+    {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
+    {% } %}
+
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <angular2-presentation>Loading...</angular2-presentation>
+  </body>
+  
+  {% if (o.webpackConfig.metadata.ENV === 'development') { %}
+  <!-- Webpack Dev Server reload -->
+  <script src="http://{%= o.webpackConfig.metadata.host %}:{%= o.webpackConfig.metadata.port %}/webpack-dev-server.js"></script>
+  {% } %}
+
+  <!-- Webpack HtmlWebpackPlugin manually inject scripts -->
+  {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+  <script src="{%= o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+  {% } %}
+
+</html>

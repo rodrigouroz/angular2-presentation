@@ -1,0 +1,12 @@
+{
+  "name": "angular2-presentation-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "compression": "^1.6.0",
+    "express": "^4.13.3"
+  }
+}

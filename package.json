@@ -1,0 +1,47 @@
+{
+  "name": "angular2-presentation",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "./node_modules/.bin/rimraf node_modules dist && npm cache clean",
+    "clean:dist": "./node_modules/.bin/rimraf dist",
+    "prebuild": "npm run clean:dist",
+    "build": "./node_modules/.bin/webpack --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-cached",
+    "dev": "./node_modules/.bin/webpack-dev-server --progress --profile --colors --display-error-details --display-cached",
+    "start": "node dist/index.js",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "angular2": "2.0.0-beta.11",
+    "compression": "^1.6.0",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.35.0",
+    "express": "^4.13.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "^0.6.4"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^0.3.3",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^1.7.0",
+    "http-server": "^0.8.5",
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.4",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.0",
+    "style-loader": "^0.13.0",
+    "ts-helper": "0.0.1",
+    "ts-loader": "^0.7.2",
+    "tslint": "^3.2.1",
+    "tslint-loader": "^2.1.0",
+    "typescript": "^1.8.2",
+    "typings": "^0.6.8",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-md5-hash": "0.0.4"
+  }
+}

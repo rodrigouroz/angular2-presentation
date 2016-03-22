@@ -1,0 +1,5 @@
+<h1>List of topics to investigate <small *ngIf="backend.pendingRequestCount | async">(loading...)</small></h1>
+<input type="search" #title />
+<button (click)="search(title.value)">Search</button>
+<button (click)="list()">List</button>
+<grid [rows]="contents" [columns]="columns" (action)="onAction($event)"></grid>
